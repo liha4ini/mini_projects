@@ -1,0 +1,49 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#diamond path:nth-child(1) {
+    stroke-dasharray: 363px;
+    stroke-dashoffset: 363px;
+    animation: anime 2s ease forwards;
+}
+
+#diamond path:nth-child(2) {
+    stroke-dasharray: 361px;
+    stroke-dashoffset: 361px;
+    animation: anime 2s ease forwards;
+}
+
+#diamond path:nth-child(3) {
+    stroke-dasharray: 326px;
+    stroke-dashoffset: 326px;
+    animation: anime 2s ease forwards;
+}
+
+#diamond path:nth-child(4) {
+    stroke-dasharray: 198px;
+    stroke-dashoffset: 198px;
+    animation: anime 2s ease forwards;
+}
+
+#diamond path:nth-child(5) {
+    stroke-dasharray: 194px;
+    stroke-dashoffset: 194px;
+    animation: anime 2s ease forwards;
+}
+
+#diamond path:nth-child(6) {
+    stroke-dasharray: 394px;
+    stroke-dashoffset: 394px;
+    animation: anime 2s ease forwards;
+}
+
+@keyframes anime {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
