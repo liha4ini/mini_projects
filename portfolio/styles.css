@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body, html {
+  background: linear-gradient(45deg, #636363, #000000);
+  height: 100%;
+  overflow: auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  height: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  padding-top: 420px;
+}
+
+h1 {
+  color: rgb(200, 188, 188);
+  line-height: 45px;
+  font-size: 35px;
+}
+
+.name {
+  color: rgb(89, 89, 220);
+  font-size: 40px;
+}
+
+.descr {
+  color: rgb(200, 188, 188);
+  font-size: 30px;
+  padding: 90px 0 0 45px;
+}
+
+.wrapper-card {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 130px;
+  padding-left: 100px;
+}
+
+.card {
+  width: 50%;
+  height: 470px;
+  cursor: pointer;
+  /* margin-top: 30px; */
+  /* position: absolute;
+  top: 356px;
+  right: -210px; */
+  transform: translate(-50%, -50%);
+  /* box-shadow: inset 0 0 5px; */
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(0);
+}
+
+.front,
+.back {
+  width: 645px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.7s ease;
+  border-radius: 10px;
+  background: linear-gradient(#D6D6D6, #F2F2F2);
+}
+
+.front {
+  transform: perspective(600px) rotateY(0);
+}
+
+.front img {
+  width: 100%;
+  height: auto;
+}
+
+.back {
+  transform: perspective(600px) rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.back h1 {
+  color: #444;
+  font-size: 24px;
+}
+
+.back h1 span {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 5px 0 10px;
+}
+
+.back .socials {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back .socials a {
+  color: #444;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border-radius: 50%;
+  transition: 0.4s ease;
+}
+
+.back .socials a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* button */
+
+.main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+button {
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  width: 250px;
+  font-weight: 600;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button-text {
+  color: rgb(200, 188, 188);
+  text-shadow: 1px 1px 20px black;
+}
+
+button:hover .wave {
+  top: -150px;
+}
+
+button span {
+  position: relative;
+}
+
+button .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(45deg, #4F00BC, #29ABE2);
+  transition: .5s ease;
+}
+
+button .wave:after, button .wave:before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+button .wave:after {
+  border-radius: 40%;
+  background: rgba(51, 51, 51, 0.5);
+  animation: wave 7s linear infinite;
+}
+
+button .wave:before {
+  border-radius: 45%;
+  background: #333333;
+  animation: wave 12s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  0% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+
+/* card-block */
+
+.card-block {
+  max-width: 1600px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.project-card {
+  width: 600px;
+  height: 400px;
+}
+
+.project-card-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
